@@ -1,0 +1,46 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+    Задача n
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row justify-content-around align-items-center" style=" height: 200px">
+            <a href="#" class="top-bar-content" style="color: #59a959;">EASY</a>
+            <a href="#" class="top-bar-content" style="color: #e4be77;">SOMEWHAT</a>
+            <a href="#" class="top-bar-content" style="color: #e66d6d;">HARD</a>
+        </div>
+        <div class="row justify-content-around">
+            <div class="col-md-5 task_bar">
+                {% block task_text %}
+                <div class="p-3 mb-2 bg-light text-dark">{{textarea}}</div>
+                
+                {% endblock task_text %}
+            </div>
+            <div class="col-md-6 code_bar">
+                <div class="row task_name">
+                    {% block task_name %}{{article}}{% endblock task_name %}
+                </div>
+                <div class="row">
+                    <a href="#" class="col bottom-code-bar">
+                        Пропустить
+                    </a>
+                    <a href="#" class="col bottom-code-bar">
+                        Комментировать
+                    </a>
+                    <a href="#" class="col bottom-code-bar">
+                        показать решение
+                    </a>
+                </div>
+                <form class="" method="post">
+                    {% csrf_token %}
+                    <textarea id="code-area" type="text" name="code"></textarea>
+                    <input class="bottom-code-bar" type="submit" value="Отправить">
+                    {% if result %}<div>Result: {{ result }}</div>{% endif %}
+                    {% if process_time %}<div>Time: {{ process_time }}</div>{% endif %}
+                    {% if output %}<div>Output: {{ output }}</div>{% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

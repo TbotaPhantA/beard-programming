@@ -1,0 +1,83 @@
+.top-bar-content{
+    text-decoration: none;
+    color: #6C757D;
+    font-size: 54px;
+}
+
+body > div > div > a {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.top-bar-content:hover{
+    text-decoration: none;
+    color: black;
+    text-shadow: 0px 0px 4px black;
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.task_bar{
+    min-height: auto;
+    border-radius: 15px;
+}
+
+.code_bar{
+    min-height: auto;
+}
+
+.task_name{
+    margin: 10px;
+    padding-bottom: 25px;
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 20px;
+    background-color: #6C757D;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    font-size: 32px;
+}
+
+.bottom-code-bar{
+    text-decoration: none;
+    background-color: #6C757D;
+    color: white;
+    font-size: 16px;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+
+body > div > div > div > div > a {
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.bottom-code-bar:hover{
+    text-decoration: none;
+    background-color: #000000a8;
+    color: white;
+    -webkit-transform: scale(0.98);
+    -ms-transform: scale(0.98);
+    transform: scale(0.98);
+}
+
+.task_text{
+    font-size: large;
+}
+
+#code-area{
+    width: 100%;
+    resize: none;
+    height: 250px;
+}
